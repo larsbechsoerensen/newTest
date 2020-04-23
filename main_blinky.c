@@ -145,10 +145,11 @@ static void taskB(void* pvParameters)
 
         if (xQueueReceive(xQueue2, &(xMessage), (TickType_t)10) == pdPASS)
         {
-            printf("\nReceived struct msgId: %c\n", xMessage.ucMessageID);
+/*            printf("\nReceived struct msgId: %c\n", xMessage.ucMessageID);
             char* data = xMessage.ucData;
             *(data + 10) = '\0';
             printf("\nReceived struct data: %s\n", data);
+            */
         }
         else {
             printf("\nTime out: Received struct\n");
